@@ -3,39 +3,40 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<title>小小数独 · Kindle 4×4</title>
+<title>小小数独 · Paperwhite 7 大屏低闪版</title>
 <style>
 html,body{margin:0;padding:0;background:#fff;color:#111;font-family:Arial,"Noto Sans CJK SC","Microsoft YaHei",sans-serif;-webkit-text-size-adjust:100%;}
-body{font-size:18px;line-height:1.35;}
-#app{max-width:480px;margin:0 auto;padding:12px 14px 24px;text-align:center;}
-h1{font-size:27px;line-height:1.2;margin:10px 0 5px;font-weight:bold;}
- .sub{font-size:15px;margin:0 0 10px;}
-#level{font-size:16px;font-weight:bold;margin:6px 0 10px;}
+body{font-size:19px;line-height:1.25;}
+#app{max-width:720px;margin:0 auto;padding:7px 9px 16px;text-align:center;}
+h1{font-size:33px;line-height:1.13;margin:5px 0 4px;font-weight:bold;}
+.sub{font-size:16px;margin:0 0 7px;}
+#level{font-size:21px;font-weight:bold;margin:6px 0 9px;}
 #grid{width:100%;border:4px solid #111;border-collapse:collapse;table-layout:fixed;margin:0 auto;}
-#grid td{height:72px;padding:0;border:2px solid #111;vertical-align:middle;text-align:center;}
+#grid td{height:116px;padding:0;border:2px solid #111;vertical-align:middle;text-align:center;}
 #grid td.thick-right{border-right:4px solid #111;}
 #grid tr.thick-bottom td{border-bottom:4px solid #111;}
-#grid button{border:0;border-radius:0;background:#fff;color:#111;padding:0;margin:0;width:100%;height:72px;display:block;font-family:Arial,sans-serif;font-size:37px;line-height:1.2;font-weight:bold;cursor:pointer;-webkit-tap-highlight-color:transparent;}
-#grid button.given{background:#e5e5e5;color:#111;}
-#grid button.selected{background:#111;color:#fff;}
-#grid button.error{background:#aaa;color:#000;text-decoration:underline;}
-#grid button.given.selected{background:#333;color:#fff;}
-#message{font-size:18px;font-weight:bold;min-height:47px;margin:13px 0 4px;}
-#numbers{width:100%;border-collapse:separate;border-spacing:6px;margin:0 auto;table-layout:fixed;}
+#grid button{box-sizing:border-box;display:block;width:100%;height:116px;margin:0;padding:0;border:5px solid transparent;border-radius:0;background:#fff;color:#111;font-family:Arial,sans-serif;font-size:54px;line-height:1;font-weight:bold;cursor:pointer;-webkit-tap-highlight-color:transparent;}
+#grid button.given{background:#eee;color:#111;}
+#grid button.selected{border:5px solid #111;}
+#grid button.error{text-decoration:underline;border:5px double #111;}
+#message{font-size:20px;font-weight:bold;min-height:31px;margin:9px 0 5px;}
+#numbers{width:100%;border-collapse:separate;border-spacing:5px;margin:0 auto;table-layout:fixed;}
 #numbers td{padding:0;text-align:center;}
-#numbers button{display:block;width:100%;min-height:61px;background:#fff;color:#111;border:3px solid #111;border-radius:7px;font-size:29px;font-weight:bold;font-family:Arial,sans-serif;padding:0;cursor:pointer;}
-.actions{margin:8px -3px 0;}
-.action{display:inline-block;box-sizing:border-box;min-height:49px;width:31%;margin:3px 0.6%;padding:6px 0;color:#111;background:#eee;border:2px solid #111;border-radius:6px;font-family:Arial,"Microsoft YaHei",sans-serif;font-size:17px;font-weight:bold;vertical-align:top;cursor:pointer;}
-#instructions{font-size:15px;text-align:left;border-top:2px solid #111;margin-top:17px;padding-top:12px;}
-#instructions p{margin:4px 0;}
-#diagnostics{font-size:13px;border:1px solid #aaa;color:#444;text-align:center;margin-top:14px;padding:7px;}
-@media screen and (max-width:380px){#app{padding:8px 9px 20px;}h1{font-size:25px;}#grid td,#grid button{height:58px;}#grid button{font-size:34px;}#numbers button{min-height:54px;}.action{font-size:15px;}}
+#numbers button{display:block;width:100%;min-height:77px;background:#fff;color:#111;border:3px solid #111;border-radius:3px;font-size:39px;font-weight:bold;font-family:Arial,sans-serif;padding:0;cursor:pointer;-webkit-tap-highlight-color:transparent;}
+.actions{margin:7px -2px 0;}
+.action{display:inline-block;box-sizing:border-box;min-height:57px;width:31%;margin:3px 0.6%;padding:5px 0;color:#111;background:#fff;border:2px solid #111;border-radius:3px;font-family:Arial,"Microsoft YaHei",sans-serif;font-size:20px;font-weight:bold;vertical-align:top;cursor:pointer;-webkit-tap-highlight-color:transparent;}
+#instructions{font-size:16px;text-align:left;border-top:2px solid #111;margin-top:12px;padding-top:8px;}
+#instructions p{margin:3px 0;}
+#diagnostics{font-size:13px;color:#444;text-align:center;margin-top:8px;padding:3px;}
+@media screen and (min-width:650px){#grid td,#grid button{height:132px;}#grid button{font-size:61px;}#numbers button{min-height:84px;font-size:43px;}}
+@media screen and (max-width:500px){#app{padding:6px 7px 12px;}h1{font-size:28px;}#grid td,#grid button{height:91px;}#grid button{font-size:45px;}#numbers button{min-height:66px;font-size:34px;}.action{min-height:51px;font-size:18px;}}
+@media screen and (max-width:370px){h1{font-size:25px;}#grid td,#grid button{height:73px;}#grid button{font-size:38px;}.sub{font-size:14px;}#numbers button{min-height:56px;}.action{font-size:16px;}}
 </style>
 </head>
 <body>
 <div id="app">
   <h1>小小数独 4 × 4</h1>
-  <p class="sub">Paperwhite 第七代低刷新测试版 · 无广告</p>
+  <p class="sub">Paperwhite 7 · 大屏低闪版 · 无广告</p>
   <div id="level">第 1 关 · 入门</div>
   <table id="grid" aria-label="四乘四数独棋盘">
     <tbody>
@@ -45,15 +46,15 @@ h1{font-size:27px;line-height:1.2;margin:10px 0 5px;font-weight:bold;}
       <tr><td><button type="button" id="c12">&nbsp;</button></td><td class="thick-right"><button type="button" id="c13">2</button></td><td><button type="button" id="c14">4</button></td><td><button type="button" id="c15">&nbsp;</button></td></tr>
     </tbody>
   </table>
-  <div id="message" role="status">先点一个空格，再选数字 1～4。</div>
+  <div id="message" role="status">选空格，再点击数字 1～4。</div>
   <table id="numbers" aria-label="数字输入"><tr>
     <td><button type="button" id="n1">1</button></td><td><button type="button" id="n2">2</button></td><td><button type="button" id="n3">3</button></td><td><button type="button" id="n4">4</button></td>
   </tr></table>
   <div class="actions">
     <button type="button" class="action" id="erase">擦除</button><button type="button" class="action" id="check">检查</button><button type="button" class="action" id="next">新题</button>
   </div>
-  <div id="instructions"><p><b>怎么玩：</b>每行、每列、每个粗线框里的 2×2 小方格，都要填入 1、2、3、4，且不能重复。</p><p>灰色数字是题目，不能修改；选中白格后点击下方数字。</p></div>
-  <div id="diagnostics">低刷新测试版：只更新变化的格子。若仍全屏闪烁，说明网页无法控制设备底层刷新。</div>
+  <div id="instructions"><p><b>怎么玩：</b>每行、每列、每个粗线框里的 2×2 小方格，都要填入 1、2、3、4，且不能重复。</p><p>灰色数字不能改；选白格后点下方数字。</p></div>
+  <div id="diagnostics">大屏低闪版 V1.2：触屏轻点，选中时只改变细边框。</div>
 </div>
 <script type="text/javascript">
 (function(){
@@ -67,7 +68,7 @@ var games=[
 {p:[3,1,2,0,2,0,3,0,0,0,4,0,0,0,1,3],s:[3,1,2,4,2,4,3,1,1,3,4,2,4,2,1,3]},
 {p:[0,0,2,0,0,0,0,4,3,0,4,1,0,1,0,2],s:[1,4,2,3,2,3,1,4,3,2,4,1,4,1,3,2]}
 ];
-var index=0,board=[],chosen=-1,renderedText=[],renderedClass=[];
+var index=0,board=[],chosen=-1,renderedText=[],renderedClass=[],markErrors=false;
 function el(id){return document.getElementById(id);}
 function say(message){var target=el('message');if(target.innerHTML!==message)target.innerHTML=message;}
 function boxOf(i){return Math.floor(Math.floor(i/4)/2)*2+Math.floor((i%4)/2);}
@@ -79,63 +80,72 @@ function conflict(i){
  }
  return false;
 }
-function draw(){
- var i,cell,txt,cls;
- for(i=0;i<16;i++){
-  cell=el('c'+i);txt=board[i]===0?'&nbsp;':String(board[i]);
-  if(renderedText[i]!==txt){cell.innerHTML=txt;renderedText[i]=txt;}
-  cls=games[index].p[i]!==0?'given':'';
-  if(i===chosen)cls+=(cls?' ':'')+'selected';
-  else if(conflict(i))cls+=(cls?' ':'')+'error';
-  if(renderedClass[i]!==cls){cell.className=cls;renderedClass[i]=cls;}
- }
+function paint(i){
+ var button=el('c'+i),text=board[i]?String(board[i]):'&nbsp;',cls=games[index].p[i]?'given':'';
+ if(i===chosen)cls+=(cls?' ':'')+'selected';
+ if(markErrors&&conflict(i))cls+=(cls?' ':'')+'error';
+ if(renderedText[i]!==text){button.innerHTML=text;renderedText[i]=text;}
+ if(renderedClass[i]!==cls){button.className=cls;renderedClass[i]=cls;}
 }
+function paintAll(){var i;for(i=0;i<16;i++)paint(i);}
 function choose(i){
- chosen=i;
- draw();
- if(games[index].p[i]!==0)say('这是题目数字，不能修改。请选白格。');
- else say('已选中第 '+(Math.floor(i/4)+1)+' 行，第 '+(i%4+1)+' 列。');
+ if(games[index].p[i]){say('灰色数字是题目，请点击白色空格。');return;}
+ if(i===chosen)return;
+ var old=chosen;chosen=i;
+ if(old>=0)paint(old);
+ paint(i);
 }
 function put(n){
  if(chosen<0){say('请先点击一个白色空格。');return;}
- if(games[index].p[chosen]!==0){say('灰色数字不能改，请选白格。');return;}
+ if(games[index].p[chosen])return;
+ if(board[chosen]===n)return;
  board[chosen]=n;
- draw();
- if(n===0){say('已擦除，可以重新填数。');return;}
- if(conflict(chosen)){say('这个数字重复啦，换一个试试！');return;}
- var full=true,i;
- for(i=0;i<16;i++)if(board[i]===0)full=false;
- if(full)check();else say('填好一个！继续加油。');
+ if(markErrors){markErrors=false;paintAll();}else paint(chosen);
+ if(n===0)return;
+ var i,full=true;
+ for(i=0;i<16;i++)if(board[i]===0){full=false;break;}
+ if(full)check();
 }
 function check(){
  var i,empty=0,bad=0;
- for(i=0;i<16;i++){
-  if(board[i]===0)empty++;
-  else if(conflict(i))bad++;
- }
- if(bad){say('发现重复数字。请检查标记的格子。');draw();return;}
+ for(i=0;i<16;i++){if(!board[i])empty++;else if(conflict(i))bad++;}
+ markErrors=bad>0;
+ paintAll();
+ if(bad){say('有重复数字，请检查带下划线的格子。');return;}
  if(empty){say('还差 '+empty+' 个空格，加油！');return;}
- for(i=0;i<16;i++)if(board[i]!==games[index].s[i]){
-   say('还没完成，继续检查数字。');return;
- }
- say('恭喜过关！太棒了！点击“新题”继续。');
+ for(i=0;i<16;i++)if(board[i]!==games[index].s[i]){say('还没完成，再检查一下数字。');return;}
+ say('恭喜过关！点击“新题”继续。');
+}
+function start(){
+ board=games[index].p.slice(0);chosen=-1;markErrors=false;
+ var level='第 '+(index+1)+' 关 · '+(index<4?'入门':'挑战');
+ if(el('level').innerHTML!==level)el('level').innerHTML=level;
+ paintAll();
+ say('选空格，再点击数字 1～4。');
 }
 function next(){index=(index+1)%games.length;start();}
-function start(){
- var i;
- board=games[index].p.slice(0);chosen=-1;
- el('level').innerHTML='第 '+(index+1)+' 关 · '+(index<4?'入门':'挑战');
- draw();say('先点一个白色空格，再选数字 1～4。');
+function bindTap(node,callback){
+ var touchAt=0;
+ node.ontouchend=function(e){
+  if(e&&e.preventDefault)e.preventDefault();
+  touchAt=(new Date()).getTime();
+  callback();
+  return false;
+ };
+ node.onclick=function(){
+  if((new Date()).getTime()-touchAt<700)return false;
+  callback();
+  return false;
+ };
 }
-function bindCell(i){el('c'+i).onclick=function(){choose(i);return false;};}
-function bindNumber(n){el('n'+n).onclick=function(){put(n);return false;};}
+function bindCell(i){bindTap(el('c'+i),function(){choose(i);});}
+function bindNumber(n){bindTap(el('n'+n),function(){put(n);});}
 var k;
 for(k=0;k<16;k++)bindCell(k);
 for(k=1;k<=4;k++)bindNumber(k);
-el('erase').onclick=function(){put(0);return false;};
-el('check').onclick=function(){check();return false;};
-el('next').onclick=function(){next();return false;};
-el('diagnostics').innerHTML='互动状态：JavaScript 已加载。若点格子会变黑，触屏互动正常。';
+bindTap(el('erase'),function(){put(0);});
+bindTap(el('check'),check);
+bindTap(el('next'),next);
 start();
 })();
 </script>
